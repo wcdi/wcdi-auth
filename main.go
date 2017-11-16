@@ -1,7 +1,11 @@
 package main
 
-import "fmt"
+import (
+	"github.com/wcdi/wcdi-auth/cmd"
+)
 
 func main() {
-	fmt.Println("wcdi-auth")
+	if err := cmd.RootCmd.Execute(); err != nil {
+		panic(err)
+	}
 }
